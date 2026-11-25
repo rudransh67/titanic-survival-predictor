@@ -46,21 +46,23 @@ sex = st.selectbox(
     ["Male", "Female"]
 )
 
-age = st.number_input(
-    "Age",
-    min_value=0.0,
-    max_value=100.0,
-    value=25.0,
-    step=1.0
+
+age = st.slider(
+    "Passenger Age",
+    min_value=0,
+    max_value=100,
+    value=25,
+    step=1
 )
 
-fare = st.number_input(
+fare = st.slider(
     "Ticket Fare",
     min_value=0.0,
     max_value=600.0,
     value=32.0,
     step=1.0
 )
+
 
 # Prediction button
 if st.button("Predict Survival", type="primary"):
